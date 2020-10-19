@@ -1,0 +1,42 @@
+/*header-start*/
+
+@media (max-width: 1040px){
+    .header__title{
+        display:none;
+    }
+    .header__phone-number-number{
+        font-size:16px;
+    }
+}
+
+/*modal-start*/
+
+@media (max-width:460px){
+    .modal-form{
+        width:300px;
+    }
+
+    .modal-form__title{
+        width:270px;
+    }
+}
+
+/*modal-end*/
+
+/*header-end*/
+
+
+/*main-start*/
+
+@media 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi)  {
+   .first-screen  {
+      background-image: url('../img/first-screen@2x.jpg');
+   }
+}
+
+
+/*main-end*/
