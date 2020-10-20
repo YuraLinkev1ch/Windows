@@ -7,6 +7,13 @@
     .header__phone-number-number{
         font-size:16px;
     }
+
+}
+
+@media(max-width: 767px){
+    .header__work-time{
+        display:none;
+    }
 }
 
 /*modal-start*/
@@ -25,6 +32,7 @@
 
 /*header-end*/
 
+/*---------------------------------------------------*/
 
 /*main-start*/
 
@@ -37,6 +45,38 @@ only screen and (min-resolution: 144dpi)  {
       background-image: url('../img/first-screen@2x.jpg');
    }
 }
+
+/*first-screen-start*/
+
+@media(max-width:1050px){
+    .first-screen__title{
+    font-size:28px;
+    }
+
+    .first-screen__title-big-text{
+    font-size:35px;
+    }
+}
+
+@media(max-width:990px){
+
+    .first-screen{
+        padding-top: 277px;
+    }
+
+    .first-screen__benefit {
+        margin-left:15px;
+    }
+}
+
+@media(max-width:500px){
+    .first-screen{
+        padding-top: 347px;
+    }
+}
+
+
+/*first-screen-end*/
 
 
 /*main-end*/

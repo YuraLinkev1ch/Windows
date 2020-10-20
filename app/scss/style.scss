@@ -151,6 +151,11 @@ body{
             align-self:flex-end;
             font-size: 28px;
             font-weight: bold;
+            &:focus,
+            &:hover{
+                text-decoration: none;
+                cursor: pointer;
+            }
             }
         &__title{
             min-height: 53px;
@@ -240,12 +245,6 @@ body{
 }
 
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 /*modal-window-end*/
 
@@ -277,6 +276,9 @@ body{
             font-weight: bold;
             line-height: 0.873;
         }
+    }
+    &__right-part{
+        max-width: none;
     }
     &__benefits{
         margin-top:160px;
@@ -320,9 +322,7 @@ body{
 
 
 
-.col-col{
-    flex-grow: 0;
-}
+
 
 
 
