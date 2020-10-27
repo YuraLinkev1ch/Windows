@@ -2,9 +2,7 @@
 @import "vars"; 
 @import "fonts";
 
-*{
-    outline:1px solid black;
-}
+
 
 body{
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -320,15 +318,185 @@ body{
     }
 }
 
+.section-title{
+    padding-top: 85px ;
+    padding-bottom: 114px;
+    font-size: 30px;
+    color: $grey-1;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.6;
+    &::after{
+        content: "";
+        position: relative;
+        top: 15px;
+        display:block;
+        width:100%;
+        height:2px;
+        background: url("../img/line.png") no-repeat center center;
+    }
+}
+
+
+/*glazing-start*/
 
 
 
+.glazing__item{
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.444;
+    color: rgb(36, 154, 230);
+    text-decoration: underline;
+    cursor:pointer;
+    &-img{
+        margin-bottom: 20px;
+    }
+    &-text{
+        text-align: center;
+    }
+}
 
 
 
+.glazing__description{
+    position: relative;
+    min-height: 689px;
+    padding:0 62px;
+    &_cold{
+        border-top: 5px solid $blue-main;
+        background: url("../img/glazing__description-background-cold.png") no-repeat center;
+        background-size: cover;
+        &::before{
+            content: '';
+            position: absolute;
+            top:-7px;
+            left:0;
+            display: inline-block;
+            width:100%;
+            height:20px;
+            background:  url("../img/glazing-description-decorate-element-cold.png") no-repeat center;
+        }
+    }
+    &_warm{
+        border-top: 5px solid $yellow-1;
+        background: url("../img/glazing__description-background-warm.png") no-repeat center;
+        background-size: cover;
+        &::before{
+            content: '';
+            position: absolute;
+            top:-7px;
+            left:0;
+            display: inline-block;
+            width:100%;
+            height:20px;
+            background:  url("../img/glazing-description-decorate-element-warm.png") no-repeat center;
+        }
+    }
+    &-title{  
+        padding: 21px 0;
+        width:100%;
+        min-height: 90px;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 2.4;
+        text-align: center;
+        &_cold{
+            color: $blue-1;
+        }
+        &_warm{
+            color: $yellow-1;
+        }
+    }
+    &-img{
+        margin:0 auto;
+        margin-bottom: 30px;
+        width:92%;
+        height: 300px;
+        object-fit: cover;
+    }
+    &-list{
+        position: relative;
+        margin:0;
+        margin-bottom: 40px;
+        padding-left:55px;
+        color: $black-1;
+        line-height: 2.143;
+        list-style: none;
+        &-item{
+            min-height:30px;
+            &::before{
+                content:'';
+                position: absolute;
+                margin-left: -40px;
+                margin-top: 3px;
+                display:block;
+                width: 25px;
+                height:25px;
+                background:  url("../img/check-mark.png") no-repeat center center;
+            }
+        } 
+    }
+    &-cost-button{
+        margin-bottom: 35px;
+    }
+
+    &-cost{
+        width: 204px;
+        min-height: 65px;
+        padding: 0 15px;
+        font-size: 20px;
+        color: $black-1;
+        font-weight: bold;
+        line-height: 1.5;
+        &-small-text{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 2.143;
+        }
+    }
+    &-button{
+        width: 245px;
+        min-height: 65px;
+        margin:0 15px;
+        margin-left: auto;
+        font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+        border: 1px solid $yellow-1;
+        border-radius: 10px;
+        color: $black-1;
+        font-size: 19px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 2.4;
+        text-align: center;
+        vertical-align: middle;
+        background: linear-gradient( 180deg, rgb(255,237,38) 0%, rgb(255,180,0) 100%);
+        box-shadow: 0px 2px 20px 0px rgba(255, 153, 0, 0.4);
+    }
+}
+
+
+.glazing-description-block{
+    display: none;
+}
+
+.glazing_active{
+    display: flex;
+    color: $grey-4;
+    text-decoration: none;
+}
 
 
 
+/*glazing-end*/
+
+
+*{
+    outline: 1px solid black;
+}
 
 
 
@@ -339,3 +507,4 @@ body{
 
 /*main-end*/
 @import "media"; 
+

@@ -1,3 +1,34 @@
+/*images-for-retina-start*/
+
+@media 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi)  {
+    .first-screen  {
+        background-image: url('../img/first-screen@2x.jpg');
+    }
+
+    .section-title::after{
+        background: url("../img/line@2x.png") no-repeat center center;
+    }
+
+    .glazing__description-list{
+        list-style-image: url('../img/check-mark@2x.png');
+    }
+
+    .glazing__description_cold::before{
+        background:  url("../img/glazing-description-decorate-element-cold@2x.png") no-repeat center;
+    }
+
+    .glazing__description_warm::before{
+        background:  url("../img/glazing-description-decorate-element-warm@2x.png") no-repeat center;
+    }
+}
+
+/*images-for-retina-end*/
+
+
 /*header-start*/
 
 @media (max-width: 1040px){
@@ -34,17 +65,16 @@
 
 /*---------------------------------------------------*/
 
+
 /*main-start*/
 
-@media 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-resolution: 1.5dppx),
-only screen and (min-resolution: 144dpi)  {
-   .first-screen  {
-      background-image: url('../img/first-screen@2x.jpg');
-   }
+@media(max-width: 640px){
+    .section-title{
+        font-size: 20px;
+    }
 }
+
+
 
 /*first-screen-start*/
 
@@ -75,8 +105,51 @@ only screen and (min-resolution: 144dpi)  {
     }
 }
 
-
 /*first-screen-end*/
+
+
+
+/*glazing-start*/
+
+@media(max-width:568px){
+    .glazing__description{
+        padding:0;
+    }
+}
+
+
+@media(max-width: 790px){
+    .glazing__items{
+        justify-content: space-evenly !important;
+        flex-wrap:  wrap;
+    }
+
+    .glazing__item{
+        max-width: 156px;
+    }
+
+    .glazing__description-cost-button{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 1200px){
+    .glazing__description-cost-button{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .glazing__description-button{
+        margin-left: 0;
+        
+    }
+
+}
+
+
+/*glazing-end*/
+
+
 
 
 /*main-end*/
