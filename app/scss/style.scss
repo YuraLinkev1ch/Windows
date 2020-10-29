@@ -110,37 +110,46 @@ body{
         text-align: start;
         background-color: transparent;
         text-decoration: underline;
+
     }
 }
 
-/*modal-window-start*/
 
-.modal{
-    display: none;  
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+/*modals-window-start*/
+
+.modal-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+    bottom: 0;
+    z-index: 10;        
     background-color: rgba($blue-main, 0.58); 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+.modal {
+    height: auto;
+    background-color: #fff;
     &-form{
         position: relative;
-        display:flex;
+        display: none;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width:370px;
         min-height:442px;
         margin: auto;
         padding: 40px 50px;
         border-radius: 10px;
         background-color: $white-main;
-        -webkit-animation-name: animatetop;
-        -webkit-animation-duration: 0.4s;
-        animation-name: animatetop;
-        animation-duration: 0.4s;
         &__close{
             position: absolute;
             right:0;
@@ -154,12 +163,13 @@ body{
                 text-decoration: none;
                 cursor: pointer;
             }
-            }
+        }
         &__title{
             min-height: 53px;
             margin-top:-4px;
             margin-bottom: 25px;
             font-size: 20px;
+            text-align: center;
             color: $grey-1;
             font-weight: bold;
         }
@@ -231,20 +241,20 @@ body{
     }
 }
 
-
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
+.modal-overlay--visible {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.3s ease-in-out;
 }
 
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+.modal--visible {
+    display: flex;
+    align-items: center;
+	justify-content: center;
 }
 
 
-
-/*modal-window-end*/
+/*modals-window-end*/
 
 /*header-end*/
 
@@ -381,6 +391,7 @@ body{
         }
     }
     &_warm{
+        margin-bottom: 150px;
         border-top: 5px solid $yellow-1;
         background: url("../img/glazing__description-background-warm.png") no-repeat center;
         background-size: cover;
@@ -489,9 +500,6 @@ body{
     text-decoration: none;
 }
 
-
-
-/*glazing-end*/
 
 
 *{

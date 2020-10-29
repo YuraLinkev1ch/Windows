@@ -1,28 +1,50 @@
 /*modal-windows-start */
 
-var modalCallTheMeasurer = document.getElementById('modalCallTheMeasurer');
+const modals = document.querySelectorAll('.modal');
+const modalBtns = document.querySelectorAll('.modal-btn');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modalCloseBtn = document.querySelectorAll('.modal-form__close');
 
-var btn = document.getElementById("btnModalCallTheMeasurer");
+modalBtns.forEach((el) => {
+	el.addEventListener('click', (e) => {
+		let path = e.currentTarget.getAttribute('data-path');
 
-var span = document.getElementsByClassName("modal-form__close")[0];
+		modals.forEach((el) => {
+			el.classList.remove('modal--visible');
+		});
+
+		document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+		modalOverlay.classList.add('modal-overlay--visible');
+	});
+});
 
 
-btn.onclick = function() {
-    modalCallTheMeasurer.style.display = "block";
-}
+    /*close-button-start*/
+modalCloseBtn.forEach((el) => {
+	el.addEventListener('click', (e) => {
+		modalOverlay.classList.remove('modal-overlay--visible');
+        modals.forEach((el) => {
+			el.classList.remove('modal--visible');
+		});
+	});
+});
+    /*close-button-end */
 
-span.onclick = function() {
-    modalCallTheMeasurer.style.display = "none";
-}
+modalOverlay.addEventListener('click', (e) => {
+	console.log(e.target);
 
-window.onclick = function(event) {
-    if (event.target == modalCallTheMeasurer) {
-        modalCallTheMeasurer.style.display = "none";
+	if (e.target == modalOverlay) {
+		modalOverlay.classList.remove('modal-overlay--visible');
+		modals.forEach((el) => {
+			el.classList.remove('modal--visible');
+		});
     }
-}
 
+});
 
 /*modal-windows-end */
+
+
 
 /*modal-mask-start */
 
