@@ -76,3 +76,31 @@ for(let i = 0; i < btns.length; i++) {
 }
 
 /*glazing-tabs-end*/
+
+let OrderFinishingTabs = document.querySelector('.order-finishing')
+let OrderFinishingBtns = OrderFinishingTabs.querySelectorAll('.order-finishing__item ')
+let OrderFinishingBtnsItems = OrderFinishingTabs.querySelectorAll('.order-finishing__description')
+
+function change(arr, i) {
+	arr.forEach( OrderFinishingBtnsItems => {
+		OrderFinishingBtnsItems.forEach( i => {i.classList.remove('order-finishing-active')})
+		OrderFinishingBtnsItems[i].classList.add('order-finishing-active')
+	})
+}
+
+for(let i = 0; i < OrderFinishingBtns.length; i++) {
+	OrderFinishingBtns[i].addEventListener('click', () => {
+		change([OrderFinishingBtns, OrderFinishingBtnsItems], i)
+	})
+}
+
+/*order-finishing-start*/
+
+
+
+
+
+
+
+/*order-finishing-end*/
+

@@ -329,6 +329,7 @@ body{
 }
 
 .section-title{
+    padding: 0 15px;
     padding-top: 85px ;
     padding-bottom: 114px;
     font-size: 30px;
@@ -500,6 +501,278 @@ body{
     text-decoration: none;
 }
 
+
+/*order-finishing-start*/
+
+
+.order-finishing{
+    min-height: 882px;
+    padding-bottom: 80px;
+    background-color: $grey-5;
+    &__items{
+        padding:0 15px;
+    }
+    &__item{
+        position: relative;
+        padding:25px 15px;
+        min-height: 100px;
+        font-size: 20px;
+        font-weight: 700;
+        color: $black-1;
+        text-transform: uppercase;
+        line-height: 2.4;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+       
+        }
+        &-text{
+            padding-bottom:2px;
+            border-bottom: 1px dashed black;
+        }
+    
+    &__description{
+        min-height: 565px;
+        &-left-part-img{
+            width: 300px;
+            height: 442px;
+            object-fit: cover;
+        }
+        &-left-part-img{
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        &-center-part{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            padding-left: 5%;
+        }
+        &-right-part{
+            max-width: none
+        }
+    }
+}
+
+.interior-finishing-card{
+    padding:0 15px;
+    width: 110px;
+    min-height: 213px;
+    &__img{
+        width: 70px;
+        height: 70px;
+        margin-top: 35px;
+        object-fit: cover;
+    }
+    &__title{
+        padding-top:15px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $black-1;
+        line-height: 1.429;
+        text-align: center;
+    }
+    &__cost{
+        margin-top: auto;
+        padding-bottom: 5px;
+        font-size: 14px;
+        color: $blue-1;
+        font-weight: bold;
+        line-height: 1.429;
+        text-align: center;
+    }
+    &__with-material{
+        padding-bottom: 5px;
+        font-size: 12px;
+        color: $black-1;
+        line-height: 1.333;
+        text-align: center;
+    }
+
+}
+
+
+.exterior-finishing{
+    &-cards{
+        position: relative;
+        padding-top: 65px;
+    }
+    &-cards>.row{
+        min-height: 415px;
+        padding-bottom: 85px;
+
+    }
+    &-title{
+        padding: 0;
+        padding-left: 15px;
+        padding-bottom: 33px;
+        font-size: 14px;
+        color: $black-1;
+        font-weight: bold;
+        line-height: 1.143;
+    }
+    &-card{
+        min-width: 72px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &-card__title{
+        padding-top: 15px;
+        font-size: 10px;
+        color: $black-1;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+
+
+.order-finishing__cost-and-material{
+    position: absolute;
+    left:17px;
+    bottom: 30px;
+}
+
+.order-finishing__cost{
+    font-size: 14px;
+    color: $blue-1;
+    font-weight: bold;
+    line-height: 1.429;
+}
+
+.order-finishing__with-material{
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: $black-1;
+    line-height: 1.333;
+}
+
+.outdoor-glazing{
+    &-cards{
+        position: relative;
+        padding-top: 65px;
+       
+    }
+    &-cards>.row{
+        min-height: 414px;
+    }
+    &-card{
+        min-height:32px;
+        width:180px;
+        margin-bottom: 30px;
+        &__img{
+            padding-right: 20px;
+            align-self: center;
+        }
+        &__text{
+            font-size: 12px;
+            color: $black-1;
+            line-height: 1.333;
+        }
+    }
+    &-title{
+        padding: 0;
+        padding-bottom: 33px;
+        font-size: 14px;
+        color: $black-1;
+        font-weight: bold;
+        line-height: 1.143;
+    }
+}
+
+.outdoor-glazing-cards .order-finishing__cost-and-material{
+    position: absolute;
+    bottom: 120px;
+}
+
+.outdoor-glazing-card:nth-child(4){
+    margin-bottom: 0;
+}
+
+.outdoor-glazing-card:nth-child(4)>img{
+    padding-left: 13px;
+    padding-right: 16px;
+}
+
+
+
+
+
+.balcony-roof{
+    &-cards{
+        position: relative;
+        padding-top: 65px;
+    }
+    &-title{
+        padding: 0;
+        padding-bottom: 26px;
+        font-size: 14px;
+        color: $black-1;
+        font-weight: bold;
+        line-height: 1.143;
+    }
+    &-cards>.row{
+        min-height: 414px;
+        padding-bottom: 85px;
+    }
+    &-card{
+        height:50px;
+        margin-bottom: 20px;
+        &__img{
+            padding-right: 20px;
+            align-self: center;
+        }
+        &__text{
+            padding: 0;
+            font-size: 12px;
+            color: $black-1;
+            line-height: 1.143;
+        }
+    }
+}
+
+.balcony-roof-cards .order-finishing__cost-and-material{
+    position: absolute;
+    bottom: 120px;
+}
+
+
+.order-finishing__description{
+    display: none;
+}
+
+
+
+.order-finishing-active{
+    display: flex;
+    justify-content: center;
+    color: $blue-main;
+    background:  url("../img/order-finishing__item-background.png") no-repeat center;
+    background-size: cover;
+    &::before{
+        content: '';
+        position: absolute;
+        top:0px;
+        left:0;
+        display: inline-block;
+        width:100%;
+        height:20px;
+        background:  url("../img/order-finishing__item_active--decorate-element.png") no-repeat center;
+    }
+    &>.order-finishing__item-text{
+        border-bottom: none;
+    }
+}
+
+.order-finishing__description.order-finishing-active{
+    display:flex;
+    background: transparent;
+}
+
+
+
+/*order-finishing-end*/
 
 
 *{

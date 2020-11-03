@@ -146,8 +146,65 @@ only screen and (min-resolution: 144dpi)  {
 
 }
 
-
 /*glazing-end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*order-finishing-start*/
+
+@media(max-width: 1200px){
+    .order-finishing__item{
+        font-size: 16px;
+        min-height: 80px;
+    }
+}
+
+@media(max-width: 992px){
+    .order-finishing__description-left-part-img{
+        object-fit: none;
+        height: 442px;
+    }
+}
+
+@media(max-width: 768px){
+    .interior-finishing-cards>.row{
+        padding:0;
+    }
+    .interior-finishing-card__with-material{
+        font-size: 9px;
+    }
+}
+
+@media(max-width:755px){
+    .exterior-finishing-cards{
+        padding-left:0;
+    }
+}
+
+@media(max-width: 400px){
+    .exterior-finishing-title{
+        padding-left: 0;
+        text-align: center;
+    }
+    .exterior-finishing-cards>.row{
+        justify-content: space-evenly;
+    }
+}
+
+
+
+/*order-finishing-end*/
 
 
 
