@@ -816,6 +816,41 @@ body{
 /*our-works-end*/
 
 
+/*guarantees-start*/
+
+.guarantees{
+    min-height: 655px;
+    width: 100%;
+    background:  url("../img/quarantees/quarantees-background.png") no-repeat center;
+    background-size: cover;
+    &__section-title{
+        color: $white-main;
+        &::after{
+            content: "";
+            background: url("../img/quarantees/line.png") no-repeat center center;
+        }
+    }
+    &-card{
+        margin-bottom: 83px;
+ 
+        &__image{
+            padding-bottom: 30px;
+        }
+        &__text{
+            width: 170px;
+            font-size: 18px;
+            color: $white-main;
+            line-height: 1.2;
+            text-align: center;
+        }
+        &:nth-child(4) .guarantees-card__text{
+            margin-top: auto;
+        }
+        &:nth-child(6) .guarantees-card__text{
+            width: 130px;
+        }
+    }
+}
 
 
 
@@ -825,6 +860,22 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*guarantees-end*/
 
 *{
     outline: 1px solid black;

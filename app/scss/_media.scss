@@ -37,6 +37,19 @@ only screen and (min-resolution: 144dpi)  {
             background:  url("../img/zoom-in@2x.png") no-repeat center;
         }
     }
+
+    .guarantees{
+        min-height: 655px;
+        width: 100%;
+        background:  url("../img/quarantees/quarantees-background@2x.png") no-repeat center;
+    }
+
+    .guarantees__section-title{
+        &::after{
+            content: "";
+            background: url("../img/quarantees/line@2x.png") no-repeat center center;
+        }
+    }
 }
 
 /*images-for-retina-end*/
