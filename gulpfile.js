@@ -68,7 +68,8 @@ gulp.task('watch', function(){
 gulp.task('js', function(){
     return gulp.src([
         'node_modules/inputmask/dist/inputmask.min.js',
-        'node_modules/just-validate/dist/js/just-validate.min.js'
+        'node_modules/just-validate/dist/js/just-validate.min.js',
+        'node_modules/fslightbox/index.js'
         /*'node_modules/bootstrap/dist/js/bootstrap.min.js'*/ 
     ])
     .pipe(concat('libs.min.js'))

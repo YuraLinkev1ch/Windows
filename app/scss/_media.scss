@@ -24,6 +24,19 @@ only screen and (min-resolution: 144dpi)  {
     .glazing__description_warm::before{
         background:  url("../img/glazing-description-decorate-element-warm@2x.png") no-repeat center;
     }
+
+    .our-works__image{
+        &::before{
+            content: '';
+            position: absolute;
+            top:50%;
+            left:50%;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background:  url("../img/zoom-in@2x.png") no-repeat center;
+        }
+    }
 }
 
 /*images-for-retina-end*/

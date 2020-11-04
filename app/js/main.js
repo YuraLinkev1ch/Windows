@@ -77,6 +77,10 @@ for(let i = 0; i < btns.length; i++) {
 
 /*glazing-tabs-end*/
 
+
+
+/*order-finishing-start*/
+
 let OrderFinishingTabs = document.querySelector('.order-finishing')
 let OrderFinishingBtns = OrderFinishingTabs.querySelectorAll('.order-finishing__item ')
 let OrderFinishingBtnsItems = OrderFinishingTabs.querySelectorAll('.order-finishing__description')
@@ -94,13 +98,15 @@ for(let i = 0; i < OrderFinishingBtns.length; i++) {
 	})
 }
 
-/*order-finishing-start*/
-
-
-
-
-
-
-
 /*order-finishing-end*/
 
+
+
+/*our-works-gallery-start */
+
+
+
+
+
+
+/*our-works-gallery-end*/
