@@ -234,5 +234,15 @@ only screen and (min-resolution: 144dpi)  {
 
 
 
+/*services-start*/
+
+@media(max-width:768px ){
+    .services-card:nth-child(1){
+        margin-left: -27px;
+    }
+}
+
+/*services-end*/
+
 
 /*main-end*/

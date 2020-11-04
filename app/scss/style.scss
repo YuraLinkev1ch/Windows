@@ -329,7 +329,7 @@ body{
 }
 
 .section-title{
-    padding: 0 15px;
+    padding: 0 38px;
     padding-top: 85px ;
     padding-bottom: 114px;
     font-size: 30px;
@@ -832,7 +832,6 @@ body{
     }
     &-card{
         margin-bottom: 83px;
- 
         &__image{
             padding-bottom: 30px;
         }
@@ -852,30 +851,42 @@ body{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*guarantees-end*/
+
+
+
+
+
+/*services-start*/
+
+.services{
+    min-height: 342px;
+    padding-bottom: 92px;
+    &__section-title{
+        text-transform: none;
+    }
+    &-card{
+        padding-bottom: 30px;
+        &__image{
+            padding-right: 20px;
+        }
+        &__text{
+            font-size: 20px;
+            color: $black-1;
+            line-height: 1.5;
+        }
+    }
+}
+
+/*services-end*/
+
+
+
+
+
+
+
+
 
 *{
     outline: 1px solid black;
