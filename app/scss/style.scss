@@ -881,6 +881,118 @@ body{
 /*services-end*/
 
 
+/*offers-start*/
+
+
+.offers{
+    min-height: 600px;
+    background:  url("../img/offers/man-with-tool-belt.jpg") no-repeat center;
+    background-size: cover;
+    &>.container{
+        padding-top: 75px;
+    }
+    &__title{
+        padding:0 15px;
+        font-size: 48px;
+        color: $blue-main;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    &__text{
+        width: 428px;
+        padding:0 15px;
+        padding-top: 90px;
+        padding-bottom: 85px;
+        font-size: 24px;
+        color: $black-1;
+        line-height: 1.667;
+    }
+}
+
+/*flipdown-start*/
+
+.flipdown-block{
+    width: 260px;
+    height: 160px;
+    border-radius: 15px;
+    background: $white-main;
+
+    &__text{
+        padding: 20px 0 ;
+        font-size: 14px;
+        color: $black-1;
+        text-transform: uppercase;
+        line-height: 2.357;
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+
+.flipdown{
+    display: flex;
+    justify-content: center;
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+}
+
+
+.rotor-group::before,
+.rotor-group::after{
+    content: none !important;
+}
+
+.rotor-group-heading::before{
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 30px;    
+    line-height: 2.538;
+}
+
+
+.flipdown .rotor{
+    margin: 0;
+    font-size: 70px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    border-radius: 0;
+}
+
+.flipdown .rotor:nth-child(2){
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.flipdown .rotor:nth-child(3){
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.flipdown .rotor-group{
+    padding-right: 17px;
+}
+
+
+
+.rotor-top,
+.rotor-bottom,
+.rotor-leaf,
+.rotor-leaf-front,
+.rotor-leaf-rear,
+.flipped{
+    width: 50px !important;
+    border-radius: 15px !important;
+}
+
+
+/*flipdown-end*/
+
+
+/*offers-end*/
+
+
 
 
 

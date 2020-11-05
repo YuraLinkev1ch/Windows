@@ -50,6 +50,12 @@ only screen and (min-resolution: 144dpi)  {
             background: url("../img/quarantees/line@2x.png") no-repeat center center;
         }
     }
+
+    .offers{
+        min-height: 600px;
+        background:  url("../img/offers/man-with-tool-belt@2x.jpg") no-repeat center;
+        background-size: cover;
+    }
 }
 
 /*images-for-retina-end*/
@@ -238,11 +244,16 @@ only screen and (min-resolution: 144dpi)  {
 
 @media(max-width:768px ){
     .services-card:nth-child(1){
-        margin-left: -27px;
+        margin-left: -35px;
+    }
+    .services-card:nth-child(3){
+        padding-left: 28px;
     }
 }
 
 /*services-end*/
+
+
 
 
 /*main-end*/
