@@ -330,8 +330,8 @@ body{
 
 .section-title{
     padding: 0 38px;
-    padding-top: 85px ;
-    padding-bottom: 114px;
+    padding-top: 75px ;
+    padding-bottom: 90px;
     font-size: 30px;
     color: $grey-1;
     text-align: center;
@@ -917,7 +917,6 @@ body{
     height: 160px;
     border-radius: 15px;
     background: $white-main;
-
     &__text{
         padding: 20px 0 ;
         font-size: 14px;
@@ -989,8 +988,46 @@ body{
 
 /*flipdown-end*/
 
-
 /*offers-end*/
+
+
+
+/*contacts-start*/
+
+.contacts{
+    padding-bottom: 80px;
+    &-map{
+        padding-bottom: 33px;
+    }
+    &-card{
+        padding-bottom: 33px;
+        &__title{
+            padding-bottom: 15px;
+            margin:0;
+            font-size: 15px;
+            color: $blue-main;
+            font-weight: 700;
+        }
+        &__text{
+            font-size: 18px;
+            color: $black-1;
+            line-height: 1.444;
+            font-weight: 700;
+        }
+    }
+}
+
+/*contacts-end*/
+
+
+
+
+
+
+
+
+
+
 
 
 
