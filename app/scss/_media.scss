@@ -256,4 +256,30 @@ only screen and (min-resolution: 144dpi)  {
 
 
 
+
+/*call-the-specialist-start*/
+
+@media(max-width: 968px){
+    .call-the-specialist{
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 767px){
+    .call-the-specialist{
+        font-size: 22px;
+        &__left-text{
+            margin-bottom: 30px;
+        }
+        &__right-text{
+            margin: 0;
+        }
+    }
+}
+
+/*call-the-specialist-end*/
+
+
+
+
 /*main-end*/

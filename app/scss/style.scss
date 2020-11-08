@@ -997,7 +997,7 @@ body{
 .contacts{
     padding-bottom: 80px;
     &-map{
-        padding-bottom: 33px;
+        margin-bottom: 33px;
     }
     &-card{
         padding-bottom: 33px;
@@ -1009,10 +1009,14 @@ body{
             font-weight: 700;
         }
         &__text{
+            display: block;
             font-size: 18px;
             color: $black-1;
             line-height: 1.444;
             font-weight: 700;
+        }
+        &__small-text{
+            font-weight: 400;
         }
     }
 }
@@ -1021,20 +1025,24 @@ body{
 
 
 
+/*call-the-specialist-start*/
 
+.call-the-specialist{
+    padding: 81px 15px;
+    font-size: 30px;
+    color: $white-main;
+    line-height: 0.867;
+    background-color: $blue-main;
+    &__right-text{
+        margin-left: 36px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*call-the-specialist-end*/
 
 
 *{
