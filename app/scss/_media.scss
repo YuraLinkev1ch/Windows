@@ -279,7 +279,47 @@ only screen and (min-resolution: 144dpi)  {
 
 /*call-the-specialist-end*/
 
-
-
-
 /*main-end*/
+
+
+
+/*footer-start*/
+
+
+@media(max-width: 767px){
+    .footer{
+        &__left-block{
+            padding-bottom: 30px;
+            padding-top: 30px;
+            align-self: center;
+            text-align: center;
+        }
+        &__logo{
+            padding-bottom: 30px;
+        }
+        &__right-block{
+            padding-bottom: 30px;
+        }
+        &__phone-number{
+            align-self: center;
+        }
+        &__mail{
+            align-self: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer-end*/

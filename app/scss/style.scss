@@ -1044,9 +1044,45 @@ body{
 
 /*call-the-specialist-end*/
 
+/*main-end*/
 
-*{
-    outline: 1px solid black;
+
+
+/*footer-start*/
+
+
+.footer{
+    min-height: 120px;
+    & .row{
+        min-height: 120px;
+    }
+    &__left-block{
+        padding:0 15px;
+        width: 210px;
+        min-height: 34px;
+        font-size: 15px;
+        color: $black-1;
+        line-height: 1.333;
+    }
+    &__right-block{
+        padding:0 15px;
+        width: 200px;
+        min-height: 34px;
+    }
+    &__phone-number{
+        font-size: 18px;
+        color: $grey-1;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: right;
+    }
+    &__mail{
+        font-size: 14px;
+        color: $blue-1;
+        text-decoration: underline;
+        line-height: 1.857;
+        text-align: right;
+    }
 }
 
 
@@ -1056,6 +1092,15 @@ body{
 
 
 
-/*main-end*/
+
+
+
+/*footer-end*/
+/*
+*{
+    outline: 1px solid black;
+}
+*/
+
 @import "media"; 
 

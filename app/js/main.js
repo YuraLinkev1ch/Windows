@@ -85,16 +85,16 @@ let OrderFinishingTabs = document.querySelector('.order-finishing')
 let OrderFinishingBtns = OrderFinishingTabs.querySelectorAll('.order-finishing__item ')
 let OrderFinishingBtnsItems = OrderFinishingTabs.querySelectorAll('.order-finishing__description')
 
-function change(arr, i) {
-	arr.forEach( OrderFinishingBtnsItems => {
-		OrderFinishingBtnsItems.forEach( i => {i.classList.remove('order-finishing-active')})
-		OrderFinishingBtnsItems[i].classList.add('order-finishing-active')
+function change2(arr2, j) {
+	arr2.forEach( OrderFinishingBtnsItems => {
+		OrderFinishingBtnsItems.forEach( j => {j.classList.remove('order-finishing-active')})
+		OrderFinishingBtnsItems[j].classList.add('order-finishing-active')
 	})
 }
 
-for(let i = 0; i < OrderFinishingBtns.length; i++) {
-	OrderFinishingBtns[i].addEventListener('click', () => {
-		change([OrderFinishingBtns, OrderFinishingBtnsItems], i)
+for(let j = 0; j < OrderFinishingBtns.length; j++) {
+	OrderFinishingBtns[j].addEventListener('click', () => {
+		change2([OrderFinishingBtns, OrderFinishingBtnsItems], j)
 	})
 }
 
