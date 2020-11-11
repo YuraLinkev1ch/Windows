@@ -21,9 +21,11 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "baguettebox.js": "^1.11.1",
     "bootstrap": "^4.5.2",
     "flipdown": "^0.3.2",
+    "focus-visible": "^5.2.0",
     "imask": "^6.0.5",
     "inputmask": "^5.0.5",
     "just-validate": "^1.5.0"

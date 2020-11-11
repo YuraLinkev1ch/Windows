@@ -73,11 +73,18 @@ only screen and (min-resolution: 144dpi)  {
 
 }
 
+@media(max-width: 575px){
+    .header__phone-number{
+        margin-bottom: 20px;
+    }
+}
+
 @media(max-width: 767px){
     .header__work-time{
         display:none;
     }
 }
+
 
 /*modal-start*/
 
@@ -123,7 +130,18 @@ only screen and (min-resolution: 144dpi)  {
 @media(max-width:990px){
 
     .first-screen{
-        padding-top: 277px;
+        padding-top: 352px;
+    }
+
+    .first-screen__benefit {
+        margin-left:15px;
+    }
+}  
+
+@media(max-width:768px){
+
+    .first-screen{
+        padding-top: 378px;
     }
 
     .first-screen__benefit {
@@ -131,11 +149,28 @@ only screen and (min-resolution: 144dpi)  {
     }
 }
 
-@media(max-width:500px){
+@media(max-width:575px){
     .first-screen{
-        padding-top: 347px;
+        padding-top: 333px;
     }
+
+    .first-screen__benefits{
+        margin-top: 43px;
+    }
+
+    .first-screen__title{
+        font-size: 23px;
+        line-height: 1;
+    }
+
+    .first-screen__title-big-text{
+        margin: 0;
+        font-size: 20px;
+
+    }
+
 }
+
 
 /*first-screen-end*/
 
@@ -179,17 +214,6 @@ only screen and (min-resolution: 144dpi)  {
 }
 
 /*glazing-end*/
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -254,7 +278,18 @@ only screen and (min-resolution: 144dpi)  {
 /*services-end*/
 
 
+/*offers-start*/
 
+@media(max-width:429px){
+    .offers__title{
+        font-size: 35px;
+    }
+}
+
+
+
+
+/*offers-end*/
 
 
 /*call-the-specialist-start*/
@@ -269,7 +304,7 @@ only screen and (min-resolution: 144dpi)  {
     .call-the-specialist{
         font-size: 22px;
         &__left-text{
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         &__right-text{
             margin: 0;

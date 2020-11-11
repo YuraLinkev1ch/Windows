@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Окна</title>
+    <!--fav-icons-start-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--fav-icons-start-->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -21,24 +30,24 @@
                 <h1 class="header__title col-auto">Остекление балконов и лоджий в Москве и Московской области
                 </h1>
 
-                <button class="header__call-the-measurer d-none d-md-flex align-items-center" id="btnModalCallTheMeasurer">
+                <button  data-path="form-popup" class="header__call-the-measurer modal-btn d-none d-md-flex align-items-center" >
                     <img class="header__call-the-measurer-img" src="img/call-the-measurer-img.png"
                         srcset="img/call-the-measurer-img@2x.png 2x" alt="call the measurer image">
                     <div class="header__call-the-measurer-text">вызвать замерщика</div>
                 </button>
 
-                <div class="header__work-time   col-2 ">
+                <div class="header__work-time col-2 ">
                     <img class="header__work-time-img" src="img/clock.png" srcset="img/clock@2x.png 2x"
                         alt="clock image">
                     <span class="header__work-time-days">без выходных</span>
                     <span class="header__work-time-time">9:00 - 18:00</span>
                 </div>
 
-                <div class="header__phone-number col-9 col-sm-5 col-md-3">
+                <div class="header__phone-number col-auto col-sm-5 col-md-3">
                     <img class="header__phone-number-img" src="img/phone.png" srcset="img/phone@2x.png 2x"
                         alt="phone image">
                     <a class="header__phone-number-number" href="tel:+7 (495) 646-61-71">+7 (495) 646-61-71</a>
-                    <button class="header__phone-number-request">Заказать обратный звонок</button>
+                    <button class="header__phone-number-request modal-btn" data-path="form-popup-2" >Заказать обратный звонок</button>
                 </div>
             </div>
         </div>
@@ -47,23 +56,61 @@
 
 
     <!--modal-window-start-->
-    <div class="modal" id="modalCallTheMeasurer">
-            <form class="modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
-                    <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
-                    <span class="modal-form__close">&times;</span>
-                    <h2 class="modal-form__title"> Запишитесь сегодня на  
+        <div class="modal-overlay">
+            <form class="modal modal-form" data-target="form-popup" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                <span class="modal-form__close">&times;</span>
+                <h2 class="modal-form__title"> Запишитесь сегодня на  
                     <span class="modal-form__title-big-text"> бесплатный замер </span>
-                    </h2>
+                </h2>
                 <label class="modal-form__label">
-                    <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
                 </label>
                 <label class="modal-form__label">
-                    <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
                 </label>
-                    <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
-                    <span class="modal-form__text">Ваши данные конфиденциальны</span>
+                <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
+                <span class="modal-form__text">Ваши данные конфиденциальны</span>
             </form>
-    </div>
+            
+
+
+            <form class="modal modal-form" data-target="form-popup-2" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                <span class="modal-form__close">&times;</span>
+                <h2 class="modal-form__title"> Закажите сейчас    
+                    <span class="modal-form__title-big-text">обратный звонок </span>
+                </h2>
+                <label class="modal-form__label">
+                <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                </label>
+                <label class="modal-form__label">
+                <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <button class="modal-form__submit" type="submit">Отправить заявку</button>
+                <span class="modal-form__text">Ваши данные конфиденциальны</span>
+            </form>
+
+            <form class="modal modal-form" data-target="form-popup-3" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                <span class="modal-form__close">&times;</span>
+                <h2 class="modal-form__title"> Рассчитать стоимость      
+                    <span class="modal-form__title-big-text">со скидкой</span>
+                </h2>
+                <label class="modal-form__label">
+                <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                </label>
+                <label class="modal-form__label">
+                <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <button class="modal-form__submit" type="submit">рассчитать стоимость</button>
+                <span class="modal-form__text">Ваши данные конфиденциальны</span>
+            </form>
+
+</div>
+
+
+
     <!--modal-window-end-->
 
     <!--main-start-->
@@ -74,32 +121,32 @@
                 <div class="row">
                     <div class="col-12 col-lg-6   first-screen__left-part">
                         <div class="row">
-                            <div class="col-12 first-screen__title">
+                            <div class="col-12 first-screen__title" data-aos="fade-right">
                                 Остекление балконов "под ключ"
                                 <div class="first-screen__title-big-text">за  12 800 рублей!</div>
                             </div>
                         </div>
                         <div class="row first-screen__benefits d-flex flex-wrap justify-content-start justify-content-lg-around">
-                            <div class="first-screen__benefit ">
+                            <div class="first-screen__benefit"  data-aos="fade-up" >
                                 <img class="first-screen__benefit-image" src="img/benefit-image-quality.png" srcset="img/benefit-image-quality@2x.png 2x" alt="Высокое качество">
                                 <div class="first-screen__benefit-circle">Высокое качество</div>
                             </div>   
-                            <div class="first-screen__benefit ">
+                            <div class="first-screen__benefit"  data-aos="fade-up" data-aos-delay="100">
                                 <img class="first-screen__benefit-image" src="img/benefit-image-time.png" srcset="img/benefit-image-time@2x.png 2x" alt="Быстрый монтаж">
                                 <div class="first-screen__benefit-circle">Быстрый монтаж</div>
                             </div>   
-                            <div class="first-screen__benefit ">
+                            <div class="first-screen__benefit"  data-aos="fade-up" data-aos-delay="150">
                                 <img class="first-screen__benefit-image" src="img/benefit-image-calendar.png" srcset="img/benefit-image-calendar@2x.png 2x" alt="Гарантия 3 года">
                                 <div class="first-screen__benefit-circle">Гарантия 3 года</div>
                             </div>   
-                            <div class="first-screen__benefit ">
+                            <div class="first-screen__benefit"  data-aos="fade-up" data-aos-delay="200">
                                 <img class="first-screen__benefit-image" src="img/benefit-image-delivery-truck.png" srcset="img/benefit-image-delivery-truck@2x.png 2x" alt="Вывоз мусора">
                                 <div class="first-screen__benefit-circle">Вывоз мусора</div>
                             </div>   
                         </div>
 
                     </div>
-                    <div class="col-4 d-lg-flex d-none  first-screen__right-part">
+                    <div class="col-4 d-lg-flex d-none  first-screen__right-part" data-aos="fade-left">
                         <form class="first-screen__modal-form modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
                             <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
                             <span class="modal-form__close">&times;</span>
@@ -123,16 +170,859 @@
     
     <!--glazing-start-->
         <section class="glazing">
+            <div class="container container_glazing">
+                
+                <div class="row justify-content-center" data-aos="fade-up">
+                    <h3 class="section-title">Остекление балконов и лоджий</h3>
+                </div>
+                <!--glazing-items-start-->
+                <div class="row d-flex justify-content-around flex-wrap glazing__items">
+                    <div class="col-2 glazing__item glazing_active d-flex flex-column align-items-center" tabindex="0" data-aos="zoom-in-up">
+                        <img class="glazing__item-img" src="img/glazing-wood-glazing.png" srcset="img/glazing-wood-glazing@2x.png 2x" alt="Деревянное остекление">
+                        <span class="glazing__item-text">Деревянное остекление</span>
+                    </div>   
+                    <div class="col-2 glazing__item d-flex flex-column align-items-center" tabindex="0" data-aos="zoom-in-up" data-aos-delay="100">
+                        <img class="glazing__item-img" src="img/glazing-aluminum-glazing.png" srcset="img/glazing-aluminum-glazing@2x.png 2x" alt="Алюминиевое остекление">
+                        <span class="glazing__item-text">Алюминиевое остекление</span>
+                    </div>      
+                    <div class="col-2 glazing__item d-flex flex-column align-items-center" tabindex="0" data-aos="zoom-in-up" data-aos-delay="150">
+                        <img class="glazing__item-img" src="img/glazing-glazing-with-plastic-frames.png" srcset="img/glazing-glazing-with-plastic-frames@2x.png 2x" alt="Остекление пластиковыми рамами">
+                        <span class="glazing__item-text">Остекление пластиковыми рамами</span>
+                    </div>  
+                    <div class="col-2 glazing__item d-flex flex-column align-items-center" tabindex="0" data-aos="zoom-in-up" data-aos-delay="200">
+                        <img class="glazing__item-img" src="img/glazing-French-glazing-(panoramic).png" srcset="img/glazing-French-glazing-(panoramic)@2x.png 2x" alt="Французское остекление (панорамное)">
+                        <span class="glazing__item-text">Французское остекление (панорамное)</span>
+                    </div>  
+                    <div class="col-2 glazing__item d-flex flex-column align-items-center" tabindex="0" data-aos="zoom-in-up" data-aos-delay="250">
+                        <img class="glazing__item-img" src="img/glazing-Extending-glazing.png" srcset="img/glazing-Extending-glazing@2x.png 2x" alt="Остекление с выносом">
+                        <span class="glazing__item-text">Остекление с выносом</span>
+                    </div>  
+                </div>
+                <!--glazing-items-end-->
 
 
+                <!--glazing-description-start-->
 
-            
+                    <!--wood-glazing-description-start-->
+
+                <div class="row glazing-description-block glazing_active" >
+                    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-stretch">
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_cold">
+                            <div class="row">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_cold">Холодное</h4>
+                                <img class="glazing__description-img"  src="img/description-block-cold/wood-glazing-description-cold.jpg" srcset="img/description-block-cold/wood-glazing-description-cold@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина 42-58 мм</li>
+                                    <li class="glazing__description-list-item">Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: 20-27 дб</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        2600 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_warm">
+                            <div class="row align-items-between">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_warm">Теплое</h4>
+                                <img class="glazing__description-img"  src="img/description-block-warm/wood-glazing-description-warm.jpg" srcset="img/description-block-warm/wood-glazing-description-warm@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина профиля: 58-78 м</li>
+                                    <li class="glazing__description-list-item">Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: до 5 класса</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class=" glazing__description-cost">
+                                        4000 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <!--wood-glazing-description-end-->
+
+
+                    <!--aluminum-glazing-description-start-->
+
+                <div class="row glazing-description-block">
+                    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-stretch">
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_cold">
+                            <div class="row">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_cold">Холодное</h4>
+                                <img class="glazing__description-img"  src="img/description-block-cold/aluminum-glazing-description-cold.jpg" srcset="img/description-block-cold/aluminum-glazing-description-cold@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина 42-58 мм</li>
+                                    <li class="glazing__description-list-item">Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: 20-27 дб</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        2600 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_warm">
+                            <div class="row align-items-between">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_warm">Теплое</h4>
+                                <img class="glazing__description-img"  src="img/description-block-warm/aluminum-glazing-description-warm.jpg" srcset="img/description-block-warm/aluminum-glazing-description-warm@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина профиля: 58-78 м</li>
+                                    <li class="glazing__description-list-item">Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: до 5 класса</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        4000 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <!--aluminum-glazing-description-end-->
+
+
+                    <!--glazing-with-plastic-frames-description-start-->
+
+                <div class="row glazing-description-block">
+                    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-stretch">
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_cold">
+                            <div class="row">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_cold">Холодное</h4>
+                                <img class="glazing__description-img"  src="img/description-block-cold/glazing-with-plastic-frames-description-cold.jpg" srcset="img/description-block-cold/glazing-with-plastic-frames-description-cold@2x.jpg 2x" >
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина 42-58 мм</li>
+                                    <li class="glazing__description-list-item">Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: 20-27 дб</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        2600 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_warm">
+                            <div class="row align-items-between">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_warm">Теплое</h4>
+                                <img class="glazing__description-img"  src="img/description-block-warm/glazing-with-plastic-frames-description-warm.jpg" srcset="img/description-block-warm/glazing-with-plastic-frames-description-warm@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина профиля: 58-78 м</li>
+                                    <li class="glazing__description-list-item">Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: до 5 класса</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        4000 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <!--glazing-with-plastic-frames-description-end-->
+
+
+                    <!--French-glazing-panoramic)-description-start-->
+
+                <div class="row glazing-description-block">
+                    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-stretch">
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_cold">
+                            <div class="row">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_cold">Холодное</h4>
+                                <img class="glazing__description-img"  src="img/description-block-cold/French-glazing-(panoramic)-description-cold.jpg"  srcset="img/description-block-cold/French-glazing-(panoramic)-description-cold@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина 42-58 мм</li>
+                                    <li class="glazing__description-list-item">Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: 20-27 дб</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        2600 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_warm">
+                            <div class="row align-items-between">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_warm">Теплое</h4>
+                                <img class="glazing__description-img"  src="img/description-block-warm/French-glazing-(panoramic)-description-warm.jpg" srcset="img/description-block-warm/French-glazing-(panoramic)-description-warm@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина профиля: 58-78 м</li>
+                                    <li class="glazing__description-list-item">Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: до 5 класса</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        4000 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button  data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <!--French-glazing-panoramic)-description-end-->
+
+
+                    <!--extending-glazing-description-start-->
+
+                <div class="row glazing-description-block">
+                    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-stretch">
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_cold">
+                            <div class="row">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_cold">Холодное</h4>
+                                <img class="glazing__description-img"  src="img/description-block-cold/еxtending-glazing-description-cold.jpg" srcset="img/description-block-cold/еxtending-glazing-description-cold@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина 42-58 мм</li>
+                                    <li class="glazing__description-list-item">Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: 20-27 дб</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        2600 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-7 col-lg-6 glazing__description glazing__description_warm">
+                            <div class="row align-items-between">
+                                <h4 class="col-12 glazing__description-title glazing__description-title_warm">Теплое</h4>
+                                <img class="glazing__description-img"  src="img/description-block-warm/extending-glazing-description-warm.jpg" srcset="img/description-block-warm/extending-glazing-description-warm@2x.jpg 2x">
+                                <ul class="glazing__description-list">
+                                    <li class="glazing__description-list-item">Конструктивная толщина профиля: 58-78 м</li>
+                                    <li class="glazing__description-list-item">Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                    <li class="glazing__description-list-item">Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                    <li class="glazing__description-list-item">Звукоизоляция: до 5 класса</li>
+                                </ul>
+                                <div class="row glazing__description-cost-button w-100 ml-auto mr-auto d-flex justify-content-between">   
+                                    <div class="glazing__description-cost">
+                                        4000 руб.кв.м.
+                                        <span class="glazing__description-cost-small-text">под ключ с установкой</span>
+                                    </div>
+                                    <button data-path="form-popup-3" class="glazing__description-button modal-btn">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <!--extending-glazing-description-end-->
+
+                <!--glazing-description-end-->
+
+            </div>
+
         </section>
     <!--glazing-end-->
+
+
+    <!--order-finishing-start-->
+    <section class="order-finishing">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <h3 class="section-title">Закажите отделку балкона со скидкой 60%!</h3>
+            </div>
+            <div class="row d-flex justify-content-around flex-wrap order-finishing__items">
+                <div class="col-6 col-md-3 order-finishing__item order-finishing-active" tabindex="0">
+                    <span class="order-finishing__item-text">внутренняя отделка</span>    
+                </div>
+                <div class="col-6 col-md-3 order-finishing__item" tabindex="0">
+                    <span class="order-finishing__item-text">внешняя отделка</span> 
+                </div>
+                <div class="col-6 col-md-3 order-finishing__item" tabindex="0">
+                    <span class="order-finishing__item-text">выносное остекление </span> 
+                </div>
+                <div class="col-6 col-md-3 order-finishing__item" tabindex="0">
+                    <span class="order-finishing__item-text">крыша на балкон</span> 
+                </div>
+            </div>
+
+            
+            <!--order-finishing-description-start-->
+
+                <!--order-finishing-description-INTERIOR-FINISH-start-->
+            <div class="row flex-column align-items-center flex-md-row   order-finishing__description order-finishing-active order-finishing__interior-finishing-description" data-aos="fade-up">
+                <div class="col-12 col-md-4 col-lg-3 order-finishing__description-left-part d-flex align-items-center justify-content-center">
+                    <img class="order-finishing__description-left-part-img" src="img/order-finishing__description/INTERIOR-FINISH.png" 
+                    srcset="img/order-finishing__description/INTERIOR-FINISH@2x.png 2x"
+                    alt="внешняя отделка">
+                </div>
+
+                <div class="col-12 col-md-8 col-lg d-flex flex-wrap  interior-finishing-cards order-finishing__description-center-part ">
+                    <div class="row col-12">
+                        <div class="col-4 d-flex flex-column align-items-center interior-finishing-card"> 
+                            <img class="interior-finishing-card__img" src="img/order-finishing__description/interior-finishing-cards/Lining.png" srcset="img/order-finishing__description/interior-finishing-cards/Lining@2x.png 2x" alt="Вагонка">
+                            <h4 class="interior-finishing-card__title">Вагонка</h4>
+                            <span class="interior-finishing-card__cost">600 руб. кв.м. </span>
+                            <span class="interior-finishing-card__with-material">с материалом</span>
+                        </div>
+                        <div class="col-4 d-flex flex-column align-items-center interior-finishing-card">
+                            <img class="interior-finishing-card__img" src="img/order-finishing__description/interior-finishing-cards/Plastic-lining.png" srcset="img/order-finishing__description/interior-finishing-cards/Plastic-lining@2x.png 2x" alt="Пластиковая вагонка">
+                            <h4 class="interior-finishing-card__title">Пластиковая вагонка</h4>
+                            <span class="interior-finishing-card__cost">750 руб. кв. м</span>
+                            <span class="interior-finishing-card__with-material">с материалом</span>
+                        </div>
+                        <div class="col-4 d-flex flex-column align-items-center interior-finishing-card">
+                            <img class="interior-finishing-card__img" src="img/order-finishing__description/interior-finishing-cards/PVC-panels.png" src="img/order-finishing__description/interior-finishing-cards/PVC-panels@2x.png 2x" alt="ПВХ-панели">
+                            <h4 class="interior-finishing-card__title">ПВХ-панели</h4>
+                            <span class="interior-finishing-card__cost">800 руб.кв. м</span>
+                            <span class="interior-finishing-card__with-material">с материалом</span>
+                        </div>
+                        <div class="col-4 d-flex flex-column align-items-center interior-finishing-card">
+                            <img class="interior-finishing-card__img" src="img/order-finishing__description/interior-finishing-cards/Laminate-flooring.png" srcset="img/order-finishing__description/interior-finishing-cards/Laminate-flooring@2x.png 2x" alt="Настил пола из ламината">
+                            <h4 class="interior-finishing-card__title">Настил пола из ламината </h4>
+                            <span class="interior-finishing-card__cost">1250 руб. кв. м</span>
+                            <span class="interior-finishing-card__with-material">с материалом</span>
+                        </div>
+                        <div class="col-4 d-flex flex-column align-items-center interior-finishing-card">
+                            <img class="interior-finishing-card__img" src="img/order-finishing__description/interior-finishing-cards/Wood-flooring.png" srcset="img/order-finishing__description/interior-finishing-cards/Wood-flooring@2x.png 2x" alt="Настил пола из дерева">
+                            <h4 class="interior-finishing-card__title">Настил пола из дерева </h4>
+                            <span class="interior-finishing-card__cost">1650 руб. кв. м </span>
+                            <span class="interior-finishing-card__with-material">с материалом</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-4 d-lg-flex d-none  order-finishing__description-right-part">
+                    <form class="first-screen__modal-form modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                        <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                        <span class="modal-form__close">&times;</span>
+                        <h2 class="modal-form__title"> Запишитесь сегодня на  
+                        <span class="modal-form__title-big-text"> бесплатный замер </span>
+                        </h2>
+                    <label class="modal-form__label">
+                        <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                    </label>
+                        <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
+                        <span class="modal-form__text">Ваши данные конфиденциальны</span>
+                </form>
+                </div>
+            </div>
+                <!--order-finishing-description-INTERIOR-FINISH-end-->
+
+
+                <!--order-finishing-description-EXTERIOR-FINISH-start-->
+            <div class="row flex-column align-items-center flex-md-row order-finishing__description order-finishing__exterior-finishing-description" data-aos="fade-up">
+
+                <div class="col-12 col-md-4 col-lg-3 order-finishing__description-left-part d-flex align-items-center justify-content-center">
+                    <img class="order-finishing__description-left-part-img" src="img/order-finishing__description/EXTERIOR-FINISH.png" 
+                    srcset="img/order-finishing__description/EXTERIOR-FINISH@2x.png 2x"
+                    alt="внешняя отделка">
+                </div>
+
+                <div class="col-12 col-md-8 col-lg d-flex  exterior-finishing-cards order-finishing__description-center-part ">
+                    <div class="row col-12 d-flex">
+                        <h4 class="col-12 exterior-finishing-title">Большой выбор цветов винилового сайдинга</h4>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/white.png" srcset="img/order-finishing__description/exterior-finishing-cards/white@2x.png 2x" alt="Белый">
+                            <h5 class="exterior-finishing-card__title">Белый</h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Smoky.png" srcset="img/order-finishing__description/exterior-finishing-cards/Smoky@2x.png 2x"  alt="Дымчатый">
+                            <h5 class="exterior-finishing-card__title">Дымчатый</h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Cream.png" srcset="img/order-finishing__description/exterior-finishing-cards/Cream@2x.png 2x" alt="Кремовый">
+                            <h5 class="exterior-finishing-card__title">Кремовый</h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Citric.png" srcset="img/order-finishing__description/exterior-finishing-cards/Citric@2x.png 2x" alt="Лимонный">
+                            <h5 class="exterior-finishing-card__title">Лимонный</h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/pink.png" srcset="img/order-finishing__description/exterior-finishing-cards/pink@2x.png 2x" alt="Розовый">
+                            <h5 class="exterior-finishing-card__title">Розовый</h4>
+                        </div>
+                        
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Salad.png" srcset="img/order-finishing__description/exterior-finishing-cards/Salad@2x.png 2x" alt="Салатовый">
+                            <h5 class="exterior-finishing-card__title">Салатовый</h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Light-gray.png"  srcset="img/order-finishing__description/exterior-finishing-cards/Light-gray@2x.png 2x" alt="Светло-серый">
+                            <h5 class="exterior-finishing-card__title">Светло-серый</h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Blue-gray.png" srcset="img/order-finishing__description/exterior-finishing-cards/Blue-gray@2x.png 2x" alt="Серо-голубой">
+                            <h5 class="exterior-finishing-card__title">Серо-голубой </h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Gray-green.png" srcset="img/order-finishing__description/exterior-finishing-cards/Gray-green@2x.png 2x" alt="Серо-зеленый">
+                            <h5 class="exterior-finishing-card__title">Серо-зеленый </h4>
+                        </div>
+                        <div class="exterior-finishing-card">
+                            <img class="exterior-finishing-card__img" src="img/order-finishing__description/exterior-finishing-cards/Beige.png" srcset="img/order-finishing__description/exterior-finishing-cards/Beige@2x.png 2x" alt="Бежевый">
+                            <h5 class="exterior-finishing-card__title">Бежевый</h4>
+                        </div>
+                    
+                    
+                    <div class="order-finishing__cost-and-material">
+                        <div class="order-finishing__cost">1800 руб./м2  </div>
+                        <div class="order-finishing__with-material">с материалом</div>
+                    </div >
+
+                    </div>
+                </div>
+
+                <div class="col-4 d-lg-flex d-none  order-finishing__description-right-part">
+                    <form class="first-screen__modal-form modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                        <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                        <span class="modal-form__close">&times;</span>
+                        <h2 class="modal-form__title"> Запишитесь сегодня на  
+                        <span class="modal-form__title-big-text"> бесплатный замер </span>
+                        </h2>
+                    <label class="modal-form__label">
+                        <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                    </label>
+                        <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
+                        <span class="modal-form__text">Ваши данные конфиденциальны</span>
+                    </form>
+                </div>
+            </div>
+                <!--order-finishing-description-EXTERIOR-FINISH-end-->
+
+
+                <!--order-finishing-description-OUTDOOR-GLAZING-start-->
+            <div class="row flex-column align-items-center flex-md-row order-finishing__description order-finishing__outdoor-glazing-description" data-aos="fade-up">
+
+                    <div class="col-12 col-md-4 col-lg-3 order-finishing__description-left-part d-flex align-items-center justify-content-center">
+                        <img class="order-finishing__description-left-part-img" src="img/order-finishing__description/OUTDOOR-GLAZING.png" srcset="img/order-finishing__description/OUTDOOR-GLAZING@2x.png 2x"
+                        
+                        alt="выносное отделение">
+                    </div>
+    
+                    <div class="col-12 col-md-8 col-lg d-flex  outdoor-glazing-cards order-finishing__description-center-part ">
+                        <div class="row col-12 d-flex flex-column ">
+
+                            <h4 class="col-12  outdoor-glazing-title">Что вам даст остекление балкона с выносом? </h4>
+                            
+                            <div class="outdoor-glazing-card d-flex justify-content-center">
+                                <img class="outdoor-glazing-card__img" src="img/order-finishing__description/outdoor-glazing-cards/1.png" srcset="img/order-finishing__description/outdoor-glazing-cards/1@2x.png 2x" alt="Балкон просторнее на 30-40 см">
+                                <div class="outdoor-glazing-card__text">Балкон просторнее на 30-40 см</div>
+                            </div>
+                            <div class="outdoor-glazing-card d-flex justify-content-center">
+                                <img class="outdoor-glazing-card__img" src="img/order-finishing__description/outdoor-glazing-cards/2.png" srcset="img/order-finishing__description/outdoor-glazing-cards/2@2x.png 2x" alt="Широкий подоконник">
+                                <div class="outdoor-glazing-card__text">Широкий подоконник</div>
+                            </div>
+                            <div class="outdoor-glazing-card d-flex justify-content-center">
+                                <img class="outdoor-glazing-card__img" src="img/order-finishing__description/outdoor-glazing-cards/3.png" srcset="img/order-finishing__description/outdoor-glazing-cards/3@2x.png 2x" alt="Дополнительная теплоизоляция">
+                                <div class="outdoor-glazing-card__text">Дополнительная теплоизоляция </div>
+                            </div>
+
+                        
+                        <div class="order-finishing__cost-and-material">
+                            <div class="order-finishing__cost">1800 руб./м2  </div>
+                            <div class="order-finishing__with-material">с материалом</div>
+                        </div >
+    
+                        </div>
+                    </div>
+    
+                    <div class="col-4 d-lg-flex d-none  order-finishing__description-right-part">
+                        <form class="first-screen__modal-form modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                            <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                            <span class="modal-form__close">&times;</span>
+                            <h2 class="modal-form__title"> Запишитесь сегодня на  
+                            <span class="modal-form__title-big-text"> бесплатный замер </span>
+                            </h2>
+                        <label class="modal-form__label">
+                            <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                        </label>
+                        <label class="modal-form__label">
+                            <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                        </label>
+                            <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
+                            <span class="modal-form__text">Ваши данные конфиденциальны</span>
+                        </form>
+                    </div>
+            </div>
+                <!--order-finishing-description-OUTDOOR-GLAZING-end-->
+
+
+
+                <!--order-finishing-description-BALCONY-ROOF-start-->
+            <div class="row flex-column align-items-center flex-md-row order-finishing__description order-finishing__balcony-roof-description" data-aos="fade-up">
+
+                    <div class="col-12 col-md-4 col-lg-3 order-finishing__description-left-part d-flex align-items-center justify-content-center">
+                        <img class="order-finishing__description-left-part-img" src="img/order-finishing__description/BALCONY-ROOF.png" srcset="img/order-finishing__description/BALCONY-ROOF@2x.png 2x"
+                        alt="крыша на балкон">
+                    </div>
+    
+
+                    <div class="col-12 col-md-8 col-lg d-flex  balcony-roof-cards order-finishing__description-center-part  ">
+                        <div class="row col-12 d-flex flex-column">
+                            <h4 class="col-12 balcony-roof-title">Монтаж крыши</h4>
+                            
+                            <div class="balcony-roof-card d-flex align-items-center">
+                                <img class="balcony-roof-card__img" src="img/order-finishing__description/balcony-roof/ondulin.png" srcset="img/order-finishing__description/balcony-roof/ondulin@2x.png 2x" alt="Ондулин">
+                                <div class="balcony-roof-card__text align-self-center">Ондулин</div>
+                            </div>
+                            <div class="balcony-roof-card d-flex ">
+                                <img class="balcony-roof-card__img" src="img/order-finishing__description/balcony-roof/metal-tile.png" srcset="img/order-finishing__description/balcony-roof/metal-tile@2x.png 2x" alt="Метоллочерепица">
+                                <div class="balcony-roof-card__text align-self-center">Метоллочерепица </div>
+                            </div>
+                        
+                        
+                        <div class="order-finishing__cost-and-material">
+                            <div class="order-finishing__cost">1800 руб./м2  </div>
+                            <div class="order-finishing__with-material">На деревянной обрешетке </div>
+                            <div class="order-finishing__cost">1800 руб./м2  </div>
+                            <div class="order-finishing__with-material">На металлической платформе  </div>
+                        </div >
+    
+                        </div>
+                    </div>
+    
+                    <div class="col-4 d-lg-flex d-none  order-finishing__description-right-part">
+                        <form class="first-screen__modal-form modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                            <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                            <span class="modal-form__close">&times;</span>
+                            <h2 class="modal-form__title"> Запишитесь сегодня на  
+                            <span class="modal-form__title-big-text"> бесплатный замер </span>
+                            </h2>
+                        <label class="modal-form__label">
+                            <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                        </label>
+                        <label class="modal-form__label">
+                            <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                        </label>
+                            <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
+                            <span class="modal-form__text">Ваши данные конфиденциальны</span>
+                        </form>
+                    </div>
+            </div>
+                <!--order-finishing-description-BALCONY-ROOF-end-->
+
+
+
+            <!--order-finishing-description-end-->
+        </div>
+    </section>
+    <!--order-finishing-end-->
+
+
+
+    <!--our-works-start-->
+
+    <section class="our-works">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <h3 class="section-title">Наши работы</h3>
+            </div>
+            <div class="row">
+                <a data-fslightbox class="col-sm-6 col-md-4  col-lg-3 our-works__image" href="img/our-works/1.jpg">
+                    <img  src="img/our-works/1.jpg" srcset="img/our-works/1@2x.jpg 2x" alt="окна" >
+                </a>
+
+                <a data-fslightbox class="col-sm-6 col-md-4  col-lg-3 our-works__image" href="img/our-works/2.jpg">
+                    <img src="img/our-works/2.jpg" srcset="img/our-works/2@2x.jpg 2x" alt="окна" >
+                </a>
+
+                <a data-fslightbox class="col-sm-6 col-md-4  col-lg-3 our-works__image" href="img/our-works/3.jpg">
+                    <img src="img/our-works/3.jpg" srcset="img/our-works/3@2x.jpg 2x" alt="окна" >
+                </a>
+                
+                <a data-fslightbox class="col-sm-6 col-md-4  col-lg-3 our-works__image" href="img/our-works/4.jpg">
+                    <img src="img/our-works/4.jpg" srcset="img/our-works/4@2x.jpg 2x" alt="окна" >
+                </a>
+                
+                <a data-fslightbox class="col-sm-6 col-md-4 col-lg-3 our-works__image" href="img/our-works/5.jpg">
+                    <img src="img/our-works/5.jpg" srcset="img/our-works/5@2x.jpg 2x"  alt="окна" >
+                </a>
+                
+                <a data-fslightbox class="col-sm-6 col-md-4 col-lg-3 our-works__image" href="img/our-works/6.jpg">
+                    <img src="img/our-works/6.jpg" srcset="img/our-works/6@2x.jpg 2x" alt="окна">
+                </a>
+                
+                <a data-fslightbox class="col-sm-6 col-md-4 col-lg-3 our-works__image" href="img/our-works/7.jpg">
+                    <img src="img/our-works/7.jpg" srcset="img/our-works/7@2x.jpg 2x" alt="окна">
+                </a>
+                
+                <a data-fslightbox class="col-sm-6 col-md-4 col-lg-3 our-works__image" href="img/our-works/8.jpg">
+                    <img src="img/our-works/8.jpg" srcset="img/our-works/8@2x.jpg 2x" alt="окна" >
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--our-works-end-->
+
+
+
+    <!--guarantees-start-->
+    
+    <section class="guarantees">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <h3 class="guarantees__section-title section-title ">Мы гарантируем вам</h3>
+            </div>
+            <div class="row guarantees-cards">
+                <div class="col-12 col-sm-6 col-lg-4 guarantees-card d-flex align-items-center flex-column" data-aos="zoom-in" data-aos-delay="50">
+                    <img class="guarantees-card__image" src="img/quarantees/medal.png" srcset="img/quarantees/medal@2x.png 2x" alt="Высокое качество">
+                    <span class="guarantees-card__text">Высокое качество</span>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 guarantees-card d-flex align-items-center flex-column" data-aos="zoom-in" data-aos-delay="100">
+                    <img class="guarantees-card__image" src="img/quarantees/list.png" srcset="img/quarantees/list@2x.png 2x" alt="Выполнение работ под ключ">
+                    <span class="guarantees-card__text">Выполнение работ под ключ</span>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 guarantees-card d-flex align-items-center flex-column" data-aos="zoom-in" data-aos-delay="150">
+                    <img class="guarantees-card__image" src="img/quarantees/alarm-clock.png" srcset="img/quarantees/alarm-clock@2x.png 2x" alt="Монтаж в короткие сроки">
+                    <span class="guarantees-card__text">Монтаж в короткие сроки</span>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 guarantees-card d-flex align-items-center flex-column" data-aos="zoom-in" data-aos-delay="200">
+                    <img class="guarantees-card__image" src="img/quarantees/piggy-bank.png" srcset="img/quarantees/piggy-bank@2x.png 2x" alt="Цены от производителя">
+                    <span class="guarantees-card__text">Цены от производителя</span>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 guarantees-card d-flex align-items-center flex-column" data-aos="zoom-in" data-aos-delay="250">
+                    <img class="guarantees-card__image" src="img/quarantees/design-tool.png" srcset="img/quarantees/design-tool@2x.png 2x" alt="Бесплатный замер и консультацию">
+                    <span class="guarantees-card__text">Бесплатный замер и консультацию</span>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 guarantees-card d-flex align-items-center flex-column" data-aos="zoom-in" data-aos-delay="300">
+                    <img class="guarantees-card__image" src="img/quarantees/donation.png" srcset="img/quarantees/donation@2x.png 2x" alt="Тепло и уют на балконе">
+                    <span class="guarantees-card__text">Тепло и уют на балконе</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--guarantees-end-->
+
+
+
+    <!--services-start-->
+
+    <section class="services">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <h3 class="services__section-title section-title ">Вы можете оплатить наши услуги:</h3>
+            </div>
+            <div class="row services-cards">
+                <div class="col-12 col-md-4 services-card d-flex justify-content-center justify-content-md-start  align-items-center" data-aos="fade-up-left" data-aos-delay="50">
+                    <img class="services-card__image" src="img/services/wallet.png" srcset="img/services/wallet@2x.png 2x" alt="Наличными">
+                    <span class="services-card__text">Наличными</span>
+                </div>
+                <div class="col-12 col-md-4 services-card d-flex justify-content-center justify-content-md-start  align-items-center" data-aos="fade-up-left" data-aos-delay="100">
+                    <img class="services-card__image" src="img/services/credit-card.png" srcset="img/services/credit-card@2x.png 2x" alt="Банковской картой">
+                    <span class="services-card__text">Банковской картой</span>
+                </div>
+                <div class="col-12 col-md-4 services-card d-flex justify-content-center justify-content-md-start  align-items-center" data-aos="fade-up-left" data-aos-delay="150">
+                    <img class="services-card__image" src="img/services/museum.png" srcset="img/services/museum@2x.png 2x" alt="Безналичный расчет">
+                    <span class="services-card__text">Безналичный расчет</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--services-end-->
+
+
+
+    <!--offers-start-->
+
+    <section class="offers">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-lg-6  offers__left-part">
+                    <div class="row">
+                        <div class="col-12 offers__title">акция - 60%</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offers__text">Успей сэкономить на остеклении! Только до 23 апреля!</div> 
+                    </div>
+
+                    <div class="row d-flex justify-content-center justify-content-md-start" >
+                        <div class="flipdown-block d-flex flex-column align-items-center">
+                            <div class="flipdown-block__text">До завершения акции:</div>
+                            <div class="flipdown" id="flipdown"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-4 d-lg-flex d-none  ml-auto first-screen__right-part" > 
+                    <form class="first-screen__modal-form modal-form" method="POST" action="https://formfor.site/send/2RhQeJWg8OZioVa6AWheCEeDZbP15W">
+                        <input type="hidden" name="admin_email[]" value="twisted.transistor.2019@gmail.com">
+                        <span class="modal-form__close">&times;</span>
+                        <h2 class="modal-form__title"> Запишитесь сегодня на  
+                        <span class="modal-form__title-big-text"> бесплатный замер </span>
+                        </h2>
+                    <label class="modal-form__label">
+                        <input class="modal-form__user-name" type="text" name="name" data-validate-field="name" placeholder="Введите ваше имя" required>
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__user-tel" type="tel" name="tel" data-validate-field="tel" placeholder="+7 (___) ___-__-__" required>
+                    </label>
+                        <button class="modal-form__submit" type="submit">Вызвать замерщика!</button>
+                        <span class="modal-form__text">Ваши данные конфиденциальны</span>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--offers-end-->
+
+
+
+    <!--contacts-start-->
+
+    <section class="contacts">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <h3 class="contacts__section-title section-title ">Как нас найти</h3>
+            </div>
+
+            <div class="row d-flex">
+                
+                <iframe class="col-12 col-md-6 contacts-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2235.2619896388546!2d37.605098!3d55.927496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53a0ac32d875f%3A0xe1064c1e68c2b74a!2z0YPQuy4g0JLRi9GB0YLQsNCy0L7Rh9C90LDRjywgNTMsINCS0LXRiNC60LgsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sINCg0L7RgdGB0LjRjywgMTI3NTQz!5e0!3m2!1sru!2sby!4v1604742944005!5m2!1sru!2sby" width="572" height="472" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <div class="col-12 col-md-5 ml-auto">
+                    <div class="contacts-card" tabindex="0">
+                        <h6 class="contacts-card__title">Юридический адрес:</h6>
+                        <div class="contacts-card__text">ООО «ИРВАС», 127411, г.Москва, Дмитровское
+                            шоссе, д.125, корпус 1</div>
+                    </div>
+                    <div class="contacts-card" tabindex="0">
+                        <h6 class="contacts-card__title">Фактический адрес:</h6>
+                        <div class="contacts-card__text">ООО «ИРВАС», 141031, МО, Мытищинский р-он, п.Вешки,Выставочная,д.53</div>
+                    </div>
+                    <div class="contacts-card">
+                        <h6 class="contacts-card__title">Телефон:</h6>
+                        <a class="contacts-card__text" href="tel:+7 (495) 646-61-71">+7 (495) 646-61- 71 <span class="contacts-card__small-text">(многоканальный)</span></a>
+                    </div>
+                    <div class="contacts-card">
+                        <h6 class="contacts-card__title">E-mail: </h6>
+                        <a class="contacts-card__text" href="mailto: info@irvasokna.ru">info@irvasokna.ru</a>
+                    </div>
+                    <div class="contacts-card" tabindex="0">
+                        <h6 class="contacts-card__title">Режим работы:</h6>
+                        <div class="contacts-card__text">9:00 - 18:00 без выходных</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--contacts-end-->
+
+
+
+    <!--call-the-specialist-start-->
+
+    <section class="call-the-specialist">
+        <div class="container">
+            <div class="row d-flex justify-content-center flex-column flex-md-row" data-aos="zoom-in"> 
+                <div class="call-the-specialist__left-text align-self-center">Остались вопросы?</div>
+                <div class="call-the-specialist__right-text modal-btn align-self-center" tabindex="0" data-path="form-popup" >Спросите у нашего специалиста!</div>
+            </div>
+        </div>
+    </section>
+
+    <!--call-the-specialist-end-->
 
     </main>
     <!--main-end-->
 
+
+
+    <!--footer-start-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex flex-column justify-content-between align-items-center flex-md-row">
+                <div class="footer__left-block">
+                    2020 © Ирвас окна Работаем без выходных
+                </div>
+
+                <a class="footer__logo col-auto" href="#">
+                    <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo">
+                </a>
+
+                <div class="footer__right-block d-flex flex-column align-items-flex-end">
+                    <a class="footer__phone-number" href="tel:+7 (495) 646-61-71">+7 (495) 646-61-71</a>
+                    <a class="footer__mail" href="mailto: info@irvasokna.ru">info@irvasokna.ru</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!--footer-end-->
+
+
+
+    <!--back-to-top-button-start-->
+
+    <a class="back_to_top" title="to back_to_top" tabindex="1"></a>
+
+    <!--back-to-top-button-end-->
+
+
+
+    <!--call-the-measurer-btn-start-->
+
+    <button  data-path="form-popup" class="call-the-measurer-btn modal-btn" tabindex="1" >
+        <img class="call-the-measurer-btn__img" src="img/call-the-measurer-img.png"
+            srcset="img/call-the-measurer-img@2x.png 2x" alt="вызвать замерщика">
+    </button>
+
+    <!--call-the-measurer-btn-end-->
 
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>

@@ -25,6 +25,7 @@ gulp.task('scss', function(){
 
 gulp.task('css', function(){
     return gulp.src([
+        'node_modules/aos/dist/aos.css',
         'node_modules/normalize.css/normalize.css',
         'node_modules/bootstrap/dist/css/bootstrap.min.css',
         'node_modules/flipdown/dist/flipdown.min.css'
@@ -68,11 +69,12 @@ gulp.task('watch', function(){
 
 gulp.task('js', function(){
     return gulp.src([
+        'node_modules/aos/dist/aos.js',
+        'node_modules/focus-visible/dist/focus-visible.min.js',
         'node_modules/inputmask/dist/inputmask.min.js',
         'node_modules/just-validate/dist/js/just-validate.min.js',
         'node_modules/fslightbox/index.js',
         'node_modules/flipdown/dist/flipdown.min.js'
-        /*'node_modules/bootstrap/dist/js/bootstrap.min.js'*/ 
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

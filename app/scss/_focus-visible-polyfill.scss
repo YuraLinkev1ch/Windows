@@ -1,0 +1,7 @@
+/*focus-visible-polyfill-start*/
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  }
+
+/*focus-visible-polyfill-end*/
