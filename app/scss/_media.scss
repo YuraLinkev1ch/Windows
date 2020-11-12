@@ -35,6 +35,7 @@ only screen and (min-resolution: 144dpi)  {
             width: 40px;
             height: 40px;
             background:  url("../img/zoom-in@2x.png") no-repeat center;
+            background-size: cover;
         }
     }
 
@@ -42,6 +43,7 @@ only screen and (min-resolution: 144dpi)  {
         min-height: 655px;
         width: 100%;
         background:  url("../img/quarantees/quarantees-background@2x.png") no-repeat center;
+        background-size: cover;
     }
 
     .guarantees__section-title{
@@ -175,6 +177,19 @@ only screen and (min-resolution: 144dpi)  {
 /*first-screen-end*/
 
 
+/*section-title-start*/
+
+@media(max-width: 756px){
+    .section-title{
+    padding-top: 55px;
+    padding-bottom: 70px;
+    font-size: 25px;
+    }
+
+}
+
+/*section-title-end*/
+
 
 /*glazing-start*/
 
@@ -212,6 +227,30 @@ only screen and (min-resolution: 144dpi)  {
     }
 
 }
+
+
+@media(max-width: 756px){
+    .glazing__item{
+        margin-left: 15px;
+        margin-right: 15px;
+        max-width: 80px;
+        width: 80px;
+    }
+
+    .glazing__item-text{
+        font-size: 13px;
+    }
+
+    .glazing__item-img{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
 
 /*glazing-end*/
 
@@ -278,6 +317,7 @@ only screen and (min-resolution: 144dpi)  {
 /*services-end*/
 
 
+
 /*offers-start*/
 
 @media(max-width:429px){
@@ -320,7 +360,6 @@ only screen and (min-resolution: 144dpi)  {
 
 /*footer-start*/
 
-
 @media(max-width: 767px){
     .footer{
         &__left-block{
@@ -343,18 +382,6 @@ only screen and (min-resolution: 144dpi)  {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*footer-end*/
