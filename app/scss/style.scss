@@ -1111,6 +1111,9 @@ body{
     color: $white-main;
     line-height: 0.867;
     background-color: $blue-main;
+    &__title{
+        margin: 0;
+    }
     &__right-text{
         margin-left: 36px;
         font-weight: 700;
