@@ -1020,6 +1020,7 @@ body{
     margin-top: 20px;
     zoom: 0.5;
     transform: scale(1);
+    transform: -webkit-scale(0.1);
 }
 
 @-moz-document url-prefix() {
