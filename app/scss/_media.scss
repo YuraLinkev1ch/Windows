@@ -14,7 +14,20 @@ only screen and (min-resolution: 144dpi)  {
     }
 
     .glazing__description-list{
-        list-style-image: url('../img/check-mark@2x.png');
+        &::before{
+            content:'';
+            position: absolute;
+            margin-left: -40px;
+            margin-top: 3px;
+            display:block;
+            width: 25px;
+            height:25px;
+            background:  url("../img/check-mark@2x.png") no-repeat center center;
+        }
+        &::marker{
+            content: none;
+        }
+
     }
 
     .glazing__description_cold::before{
@@ -173,6 +186,12 @@ only screen and (min-resolution: 144dpi)  {
 
 }
 
+@media(max-width:530px){
+    .first-screen__benefits{
+        max-width:300px;
+    }
+
+}
 
 /*first-screen-end*/
 

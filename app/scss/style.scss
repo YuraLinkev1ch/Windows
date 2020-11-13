@@ -166,7 +166,7 @@ body{
         background-color: $white-main;
         &__close{
             position: absolute;
-            right:0;
+            right:7px;
             top:0;
             color: $blue-main;
             align-self:flex-end;
@@ -325,12 +325,14 @@ body{
         color: $grey-1;
         font-weight: bold;
         line-height: 1.846;
+        text-shadow: white 1px 1px 0, white -1px -1px 0, white -1px 1px 0, white 1px -1px 0;
         &-big-text{
             margin-top: 20px;
             font-size: 55px;
             color: $grey-1;
             font-weight: bold;
             line-height: 0.873;
+            text-shadow: white 1px 1px 0, white -1px -1px 0, white -1px 1px 0, white 1px -1px 0;
         }
     }
     &__right-part{
@@ -554,6 +556,7 @@ body{
 
 .glazing_active{
     display: flex;
+    display: -webkit-box;
     color: $grey-4;
     text-decoration: none;
 }
@@ -987,6 +990,7 @@ body{
         font-size: 24px;
         color: $black-1;
         line-height: 1.667;
+        text-shadow: white 1px 1px 0, white -1px -1px 0, white -1px 1px 0, white 1px -1px 0;
     }
 }
 
@@ -1254,6 +1258,7 @@ body{
     animation-play-state: running;
     animation-iteration-count: 1, infinite;
     animation-delay: 0s, .40s;
+
     &:hover{
         transform: scale(1.1);
     }
