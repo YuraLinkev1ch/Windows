@@ -45,6 +45,7 @@ body{
         width:170px;
         min-height: 60px;
         margin:20px 0;
+        margin-right: 20px;
         color:$green;
         font-weight: bold;
         text-transform: uppercase;
@@ -131,7 +132,8 @@ body{
 
 /*modals-window-start*/
 
-.modal-overlay {
+.modal{
+    --transition-time: 0.3s;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -145,13 +147,14 @@ body{
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	visibility: hidden;
-	transition: all 0.3s ease-in-out;
-}
-
-.modal {
-    height: auto;
-    background-color: #fff;
+    visibility: hidden;
+    transition: opacity var(--transition-time), visibility var(--transition-time);
+    &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
     &-form{
         position: relative;
         display: none;
@@ -164,6 +167,7 @@ body{
         padding: 40px 50px;
         border-radius: 10px;
         background-color: $white-main;
+        
         &__close{
             position: absolute;
             right:7px;
@@ -172,10 +176,15 @@ body{
             align-self:flex-end;
             font-size: 28px;
             font-weight: bold;
-            &:focus,
+            border: none; 
+            outline: none;
+            background-color: $white-main;
             &:hover{
                 text-decoration: none;
                 cursor: pointer;
+            }
+            &:focus{
+                outline: 3px solid black;
             }
         }
         &__title{
@@ -195,7 +204,6 @@ body{
             text-transform: uppercase;
         }
         &__user-name{  
-            position:relative;
             width: 268px;
             min-height: 58px;
             margin-bottom: 22px;
@@ -217,7 +225,6 @@ body{
             }
         }
         &__user-tel{
-            position: relative;
             width: 268px;
             min-height: 58px;
             margin-bottom: 22px;
@@ -236,6 +243,7 @@ body{
             &:focus{
                 border-color: $yellow-1;
                 outline:0;
+                
             }
         }
         &__submit{ 
@@ -283,16 +291,10 @@ body{
     }
 }
 
-.modal-overlay--visible {
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.3s ease-in-out;
-}
-
-.modal--visible {
-    display: flex;
-    align-items: center;
-	justify-content: center;
+/*outline fix for mozilla*/
+input:invalid,
+input:required{
+  box-shadow:none;
 }
 
 @keyframes move-light{
@@ -301,6 +303,56 @@ body{
     20%{transform:translateX(100em) skewX(-45deg)}
     100%{transform:translateX(100em) skewX(-45deg)}
 }
+
+
+.is-open {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal-open {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+
+.fade {
+	opacity: 0;
+	transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+	opacity: 1;
+	transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+	opacity: 0;
+	transform: translateY(-100px);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+
+
+
 /*modals-window-end*/
 
 /*header-end*/
@@ -410,8 +462,11 @@ body{
     font-weight: 700;
     line-height: 1.444;
     color: rgb(36, 154, 230);
+    background-color: transparent;
     text-decoration: underline;
     cursor:pointer;
+    border: none; 
+    outline: none;
     &-img{
         margin-bottom: 20px;
     }
@@ -424,12 +479,10 @@ body{
 
 .glazing__description{
     position: relative;
-    min-height: 689px;
     padding:0 62px;
-
     &>.row{
         padding: 0 15px;
-
+        margin-bottom: 50px;
     }
     &_cold{
         border-top: 5px solid $blue-main;
@@ -505,10 +558,6 @@ body{
                 height:25px;
                 background:  url("../img/check-mark.png") no-repeat center center;
             }
-            &::marker{
-                content: none;
-
-            }
         } 
     }
     &-cost-button{
@@ -582,15 +631,15 @@ body{
         text-transform: uppercase;
         line-height: 2.4;
         text-align: center;
-        background: none;
+        background: transparent;
+        border: none; 
+        outline: none;
         cursor: pointer;
-       
         }
         &-text{
             padding-bottom:2px;
             border-bottom: 1px dashed black;
         }
-    
     &__description{
         min-height: 565px;
         &-left-part-img{
@@ -738,6 +787,7 @@ body{
         }
     }
     &-title{
+        flex-grow: 0;
         padding: 0;
         padding-bottom: 33px;
         font-size: 14px;
@@ -748,8 +798,9 @@ body{
 }
 
 .outdoor-glazing-cards .order-finishing__cost-and-material{
-    position: absolute;
-    bottom: 120px;
+    position: static;
+    margin-top: 50px;
+    margin-bottom: auto;
 }
 
 .outdoor-glazing-card:nth-child(4){
@@ -799,8 +850,9 @@ body{
 }
 
 .balcony-roof-cards .order-finishing__cost-and-material{
-    position: absolute;
-    bottom: 120px;
+    position: static;
+    margin-top: 50px;
+    margin-bottom: auto;
 }
 
 
@@ -1017,11 +1069,9 @@ body{
 .flipdown{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    zoom: 0.5;
-    transform: scale(1);
-    transform: -webkit-scale(0);
-    zoom: -webkit-0.1;
+    margin-top: -30px;
+    /*zoom: 0.5;*/
+    transform: scale(0.5);
 }
 
 @-moz-document url-prefix() {
@@ -1041,14 +1091,15 @@ body{
     top: 110px;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 30px;    
+    font-size: 30px; 
     line-height: 2.538;
+    -webkit-font-size: 15px !important;  
 }
 
 
 .flipdown .rotor{
+    font-size: 70px !important;
     margin: 0;
-    font-size: 70px;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     border-radius: 0;
 }
@@ -1078,6 +1129,10 @@ body{
     width: 50px !important;
     border-radius: 15px !important;
 }
+
+
+
+
 
 
 /*flipdown-end*/
@@ -1251,6 +1306,7 @@ body{
     border-radius: 100%;
     border: 3px solid $green;
     transition: 1s;
+    background-color: white;
 
     animation-name: call-the-measurer-btn-anim, pulse;
     animation-duration: .40s, 2s;

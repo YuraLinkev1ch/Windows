@@ -56,7 +56,10 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "app/"
-        }
+        },
+        online: true,/*! */
+        tunnel: true,/*! */
+        logLevel: "debug"/*! */
     });
 });
 
@@ -70,6 +73,7 @@ gulp.task('watch', function(){
 gulp.task('js', function(){
     return gulp.src([
         'node_modules/aos/dist/aos.js',
+        'node_modules/focus-manager/focusManager.min.js',
         'node_modules/focus-visible/dist/focus-visible.min.js',
         'node_modules/inputmask/dist/inputmask.min.js',
         'node_modules/just-validate/dist/js/just-validate.min.js',

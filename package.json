@@ -25,6 +25,7 @@
     "baguettebox.js": "^1.11.1",
     "bootstrap": "^4.5.2",
     "flipdown": "^0.3.2",
+    "focus-manager": "^0.4.1",
     "focus-visible": "^5.2.0",
     "imask": "^6.0.5",
     "inputmask": "^5.0.5",
